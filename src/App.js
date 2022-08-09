@@ -82,9 +82,9 @@ function App() {
       className="youtube"
       videoId={video}
       opts={opts}
-      onReady={() => setTimeout(() => {
+      onReady={(e) => {setVideoData(e.target); setTimeout(() => {
         Change();
-      }, 120000)}
+      }, 120000)}}
     />)
   console.log(change, video, random);
   }, 400);
