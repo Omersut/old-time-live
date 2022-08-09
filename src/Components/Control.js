@@ -10,16 +10,19 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change})
   return (
     <div className="controls">
       <div className="categories">
-        {categories.map((c, i) => (
+        {categories.map((c, i) => (<>
+        
+           
           <button
             onClick={() => {
               setCategory(c);
             }}
             className={"btn" + `${category == c ? " activeCategory" : ""}`}
           >
-            {icons[i]}
+            {icons[i]} 
           </button>
-        ))}
+        
+        </>))}
       </div>
       <div className="control">
         <button
@@ -28,7 +31,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change})
             setIsOpen(!isOpen);
           }}
         >
-          {isOpen ? <FiPause /> : <BiRightArrow />}{" "}
+          {isOpen ? <FiPause /> : <BiRightArrow />}
         </button>
         <button className="change" onClick={Change}>
           <FaExchangeAlt onClick={Change} />

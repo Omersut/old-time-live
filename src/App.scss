@@ -200,9 +200,8 @@ body {
  .btn{
     padding: 15px;
     background-color: black;
-    
-    height: 20%;
-    margin-bottom: 50px;
+    width: auto;
+    height: auto;
     font-size: 2rem;
     color: #E6E9ED;
     cursor: pointer;
@@ -264,6 +263,7 @@ body {
         transform: scale(1);
     }
 }
+
 @media only screen and (max-width: 992px){
    .controls, .option, .options{
    display: none;

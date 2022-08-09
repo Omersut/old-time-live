@@ -46,7 +46,7 @@ function App() {
   const [videoData, setVideoData] = useState("")
   const [isOpen, setIsOpen] = useState(false)
   const [category, setCategory] = useState("Music")
-  const categories = ["Music", "Movies & Series", "Talk Show", "News"];
+  const categories = ["Music", "TV Series", "Talk Show", "News"];
   const opts = {
     width: "100%",
     height: "100%",
@@ -54,15 +54,18 @@ function App() {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
+      start: 20,
+      modestbranding: 1,
+      end: 140,
     },
   };
+  const [change, setChange] = useState(false)
   
   const Change = () => {
+    setChange(!change)
     let audio = new Audio(Static);
     audio.volume = 0.2;
     audio.play();
-    setChange(!change)
-    console.log("audio");
    }
   const [videoDiv, setVideoDiv] = useState(<YouTube
     className="youtube"
@@ -70,22 +73,19 @@ function App() {
     opts={opts}
     onReady={(e) => setVideoData(e.target)}
   />)
-  const [change, setChange] = useState(false)
  
-    useEffect(() => {
-      setInterval(Change, 100000);
-    }, [])
-    
+ 
   useEffect(() => {
   let random = Math.floor(Math.random() * (year == 80 ? documentry.eighties.music.length : year == 90 ? documentry.nineties.music.length: documentry.noughties.music.length))
-  setVideo("");
+  setVideo(year == 80 ? documentry.eighties.music[random] : year == 90 ? documentry.nineties.music[random] : documentry.noughties.music[random])
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
-      videoId={year == 80 ? documentry.eighties.music[random] : year == 90 ? documentry.nineties.music[random] : documentry.noughties.music[random]}
+      videoId={video}
       opts={opts}
       onReady={(e) => setVideoData(e.target)}
     />)
+  console.log(change, video, random);
   }, 400);
   
   }, [year,change])
