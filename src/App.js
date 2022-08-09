@@ -46,7 +46,7 @@ function App() {
   const [videoData, setVideoData] = useState("")
   const [isOpen, setIsOpen] = useState(false)
   const [category, setCategory] = useState("Music")
-  const categories = ["Music", "TV Series", "Talk Show", "News"];
+  const categories = ["Music", "TV Series", "News"];
   const opts = {
     width: "100%",
     height: "100%",
@@ -56,7 +56,6 @@ function App() {
       autoplay: 1,
       start: 20,
       modestbranding: 1,
-      end: 140,
     },
   };
   const [change, setChange] = useState(false)
@@ -71,19 +70,21 @@ function App() {
     className="youtube"
     videoId={video}
     opts={opts}
-    onReady={(e) => setVideoData(e.target)}
   />)
  
  
   useEffect(() => {
   let random = Math.floor(Math.random() * (year == 80 ? documentry.eighties.music.length : year == 90 ? documentry.nineties.music.length: documentry.noughties.music.length))
   setVideo(year == 80 ? documentry.eighties.music[random] : year == 90 ? documentry.nineties.music[random] : documentry.noughties.music[random])
+  clearTimeout();
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
       videoId={video}
       opts={opts}
-      onReady={(e) => setVideoData(e.target)}
+      onReady={() => setTimeout(() => {
+        Change();
+      }, 120000)}
     />)
   console.log(change, video, random);
   }, 400);

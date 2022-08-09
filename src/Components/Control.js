@@ -1,11 +1,11 @@
 import { BiRightArrow } from 'react-icons/bi';
 import { FaExchangeAlt,FaHeadphonesAlt } from 'react-icons/fa';
 import { FiPause } from 'react-icons/fi';
-import { BsNewspaper, BsCameraReels  } from 'react-icons/bs';
-import { TbMicrophone2 } from 'react-icons/tb';
+import { BsNewspaper } from 'react-icons/bs';
+import { MdCameraRoll } from 'react-icons/md'
 
 const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change}) => {
-  const icons =[<FaHeadphonesAlt size={60} />, <BsCameraReels size={60} />, <TbMicrophone2 size={60} />, <BsNewspaper size={60} /> ]
+  const icons =[<FaHeadphonesAlt size={60} />, <MdCameraRoll size={60} />, <BsNewspaper size={60} /> ]
 
   return (
     <div className="controls">
