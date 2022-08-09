@@ -72,7 +72,7 @@ function App() {
       opts={opts}
       onReady={(e) => setVideoData(e.target)}
     />)
-  }, 7000);
+  }, 400);
   }, [year,change])
   
   
@@ -126,8 +126,8 @@ function App() {
                 <div className="sub">
                   {isOpen &&
                   videoData.videoTitle &&
-                  videoData.videoTitle.length > 35
-                    ? videoData.videoTitle.slice(0, 35) + "..."
+                  videoData.videoTitle.length > 33
+                    ? videoData.videoTitle.slice(0, 33) + "..."
                     : videoData.videoTitle}
                 </div>
               </div>
