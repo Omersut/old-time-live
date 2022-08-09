@@ -1,12 +1,8 @@
-import './App.css';
 import './App.scss';
 import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
-import { BiRightArrow } from 'react-icons/bi';
-import { FaExchangeAlt,FaHeadphonesAlt } from 'react-icons/fa';
-import { FiPause } from 'react-icons/fi';
-import { BsNewspaper, BsCameraReels  } from 'react-icons/bs';
-import { TbMicrophone2 } from 'react-icons/tb';
+import Control from './Components/Control';
+import Tv from './Components/Tv';
 
 
 function App() {
@@ -38,9 +34,7 @@ function App() {
   const [videoData, setVideoData] = useState("")
   const [isOpen, setIsOpen] = useState(false)
   const [category, setCategory] = useState("Music")
-  const icons =[<FaHeadphonesAlt size={60} />, <BsCameraReels size={60} />, <TbMicrophone2 size={60} />, <BsNewspaper size={60} /> ]
   const categories = ["Music", "Movies & Series", "Talk Show", "News"];
-  const years = [80,90,0]
   const opts = {
     width: "100%",
     height: "100%",
@@ -78,63 +72,8 @@ function App() {
   
   return (
     <div className="App">
-      <div className="controls">
-       
-       <div className="categories">
-       {categories.map((c,i) => (
-  <button
-  onClick={() => {
-    setCategory(c);
-  }}
-  className={"btn" + `${category == c ? " activeCategory" : ""}`}
->
- {icons[i]}
-</button>
-        ))}
-       </div>
-       <div className="control">
-          <button
-            className={"change" + `${!isOpen ? " start" : ""}`}
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-          >
-            {isOpen ? <FiPause /> : <BiRightArrow />}{" "}
-          </button>
-          <button className="change" onClick={Change}>
-            <FaExchangeAlt onClick={Change} />
-          </button>
-        </div>
-     
-      </div>
-      <div className="options">
-        {years.map((y) => (
-          <div
-            className={"option" + `${year == y ? " active" : ""}`}
-            onClick={() => setYear(y)}
-          >
-            {(year == y) & isOpen && (
-              videoDiv
-            )}
-            <div className="shadow" />
-            <div className="label">
-              <div className="icon">
-                <i className="fas fa-walking">{y == 0 ? "00": y}s</i>
-              </div>
-              <div className="info">
-                <div className="main">{isOpen && category}</div>
-                <div className="sub">
-                  {isOpen &&
-                  videoData.videoTitle &&
-                  videoData.videoTitle.length > 33
-                    ? videoData.videoTitle.slice(0, 33) + "..."
-                    : videoData.videoTitle}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Control categories={categories} setCategory={setCategory} category={category} isOpen={isOpen} setIsOpen={setIsOpen} Change={Change}/>
+      <Tv isOpen={isOpen} setYear={setYear} year={year} videoDiv={videoDiv} videoData={videoData} category={category}  />
       <div className="just">Just PC</div>
     </div>
   );
