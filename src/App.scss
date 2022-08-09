@@ -221,6 +221,9 @@ body {
    
     border-radius: 10px;
       margin: 0 auto;
+   &:first-child{
+      margin-left: 0;
+   }
     &:hover{
         transform: scale(1.03);
     }
