@@ -63,7 +63,7 @@ function App() {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
-      start: 20,
+      start: 25,
       modestbranding: 1,
     },
   };
