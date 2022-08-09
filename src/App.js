@@ -65,7 +65,6 @@ function App() {
   useEffect(() => {
   let random = Math.floor(Math.random() * (year == 80 ? documentry.eighties.music.length : year == 90 ? documentry.nineties.music.length: documentry.noughties.music.length))
   setVideo("");
-
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
@@ -73,7 +72,7 @@ function App() {
       opts={opts}
       onReady={(e) => setVideoData(e.target)}
     />)
-  }, 1000);
+  }, 7000);
   }, [year,change])
   
   
