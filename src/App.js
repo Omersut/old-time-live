@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 import Control from './Components/Control';
 import Tv from './Components/Tv';
+import Static from './static.mp3';
 
 
 function App() {
@@ -55,18 +56,24 @@ function App() {
       autoplay: 1,
     },
   };
+  const audio = new Audio(Static);
+  
+  const Change = () => {
+    audio.volume = 0.3;
+    audio.play();
+    setChange(!change)
+   }
   const [videoDiv, setVideoDiv] = useState(<YouTube
     className="youtube"
     videoId={video}
     opts={opts}
+    onEnd={Change}
     onReady={(e) => setVideoData(e.target)}
   />)
   const [change, setChange] = useState(false)
-  const Change = () => {
-   setChange(!change)
-  }
+  const MusicTime = setInterval(Change, 100000);
+ 
     
-  
   useEffect(() => {
   let random = Math.floor(Math.random() * (year == 80 ? documentry.eighties.music.length : year == 90 ? documentry.nineties.music.length: documentry.noughties.music.length))
   setVideo("");
@@ -78,6 +85,7 @@ function App() {
       onReady={(e) => setVideoData(e.target)}
     />)
   }, 400);
+  clearInterval(MusicTime);
   }, [year,change])
   
   
