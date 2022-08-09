@@ -12,6 +12,10 @@ function App() {
       music: [
         "OFHJHgvCZwg",
         "8yIVsJ6bFXc",
+        "hf6g3MThywI",
+        "KIiHdyjDyvk",
+        "3XF_koGsmas",
+        "IMEOeMwy89c",
       ]
     },
     nineties: {
@@ -19,6 +23,10 @@ function App() {
         "bdso4qwyul0",
         "6ahjwoNB01c",
         "Fed2MoNZNyw",
+        "7Yv8IW8KSyY",
+        "CxL1ukOw0hk",
+        "BsrAkKjG4-w",
+        "4tnyQ8lYH_k"
       ]
     },
     noughties: {
@@ -26,7 +34,10 @@ function App() {
        "SCZgGVqVsbY",
        "v74wiK7DY0A",
        "M-rZ3602Lm8",
-       "idMIEUFP3Ys"
+       "idMIEUFP3Ys",
+       "-jZbcAgOzUU",
+       "1bfaZMiSHiw",
+       "Ja3FAlRDApM",
       ]
     }
   }
