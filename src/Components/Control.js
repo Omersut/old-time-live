@@ -4,7 +4,7 @@ import { FiPause } from 'react-icons/fi';
 import { BsNewspaper } from 'react-icons/bs';
 import { MdCameraRoll } from 'react-icons/md'
 
-const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change}) => {
+const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change}) => {
   const icons =[<FaHeadphonesAlt size={60} />, <MdCameraRoll size={60} />, <BsNewspaper size={60} /> ]
 
   return (
@@ -16,6 +16,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change})
           <button
             onClick={() => {
               setCategory(c);
+              setChange(!change)
             }}
             className={"btn" + `${category == c ? " activeCategory" : ""}`}
           >

@@ -93,6 +93,7 @@ function App() {
   }
  }
  
+ 
   useEffect(() => {
   setVideo(VideoChange())
   clearTimeout();
@@ -106,12 +107,12 @@ function App() {
       }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)}}
     />)
   }, 400);
-  }, [year,change, category])
+  }, [year, change])
   
   
   return (
     <div className="App">
-      <Control categories={categories} setCategory={setCategory} category={category} isOpen={isOpen} setIsOpen={setIsOpen} Change={Change}/>
+      <Control categories={categories} setCategory={setCategory} category={category} isOpen={isOpen} setIsOpen={setIsOpen} Change={Change} setChange={setChange} change={change}/>
       <Tv isOpen={isOpen} setYear={setYear} year={year} videoDiv={videoDiv} videoData={videoData} category={category}  />
       <div className="just">Just PC</div>
     </div>
