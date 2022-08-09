@@ -17,6 +17,9 @@ function App() {
         "KIiHdyjDyvk",
         "3XF_koGsmas",
         "IMEOeMwy89c",
+      ],
+      tvSeries:[
+        "zfa-z_VPQsw",
       ]
     },
     nineties: {
@@ -28,6 +31,10 @@ function App() {
         "CxL1ukOw0hk",
         "BsrAkKjG4-w",
         "4tnyQ8lYH_k"
+      ],
+      tvSeries:[
+        "d9tvSjfCJRk",
+        "kXD2zKOsUs8",
       ]
     },
     noughties: {
@@ -39,6 +46,8 @@ function App() {
        "-jZbcAgOzUU",
        "1bfaZMiSHiw",
        "Ja3FAlRDApM",
+      ],
+      tvSeries:[
       ]
     }
   }
@@ -71,25 +80,33 @@ function App() {
     videoId={video}
     opts={opts}
   />)
- 
+ const VideoChange = () =>{
+  if(category=="Music"){
+    let random = Math.floor(Math.random() * (year == 80 ? documentry.eighties.music.length : year == 90 ? documentry.nineties.music.length: documentry.noughties.music.length))
+    return year == 80 ? documentry.eighties.music[random] : year == 90 ? documentry.nineties.music[random] : documentry.noughties.music[random]
+  }
+  else if(category=="News"){
+    
+  }else{
+    let random = Math.floor(Math.random() * (year == 80 ? documentry.eighties.tvSeries.length : year == 90 ? documentry.nineties.tvSeries.length: documentry.noughties.tvSeries.length))
+    return year == 80 ? documentry.eighties.tvSeries[random] : year == 90 ? documentry.nineties.tvSeries[random] : documentry.noughties.tvSeries[random]
+  }
+ }
  
   useEffect(() => {
-  let random = Math.floor(Math.random() * (year == 80 ? documentry.eighties.music.length : year == 90 ? documentry.nineties.music.length: documentry.noughties.music.length))
-  setVideo(year == 80 ? documentry.eighties.music[random] : year == 90 ? documentry.nineties.music[random] : documentry.noughties.music[random])
+  setVideo(VideoChange())
   clearTimeout();
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
-      videoId={year == 80 ? documentry.eighties.music[random] : year == 90 ? documentry.nineties.music[random] : documentry.noughties.music[random]}
+      videoId={VideoChange()}
       opts={opts}
       onReady={(e) => {setVideoData(e.target); setTimeout(() => {
         Change();
-      }, 120000)}}
+      }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)}}
     />)
-  console.log(change, video, random);
   }, 400);
-  
-  }, [year,change])
+  }, [year,change, category])
   
   
   return (
