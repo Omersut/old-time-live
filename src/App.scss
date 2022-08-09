@@ -1,8 +1,6 @@
 $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 .App{
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-        flex-direction: column;
-    }
+    flex-direction: column;
 }
 body {
    display:flex;
@@ -26,11 +24,9 @@ body {
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
-    min-width: 70%;
-    max-width: 1172px;
     width: calc(100% - 100px);
-    height: 90%;
-      
+    height: 80%;
+    z-index: 0;
       @for $i from 1 through 4 {
          @media screen and (max-width:(798px - $i*80)) {
             min-width:600px - $i*80;
@@ -179,17 +175,13 @@ body {
     pointer-events: none;
  }
  .controls{
-    min-width: 20%;
     border-radius: 10px;
-    height: 90%;
+    height: 12%;
     opacity: 0.92;
     display: flex;
-    flex-direction: column;
-    z-index: 0;
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-        width: 100%;
-        flex-direction: row;
-    }
+    z-index: 1;
+    width: 100%;
+    justify-content: space-around;
 
 }
  i{
@@ -199,14 +191,14 @@ body {
  .btn{
     padding: 15px;
     background-color: black;
-    width: 100%;
-    height: 17%;
+    
+    height: 20%;
     margin-bottom: 50px;
     font-size: 2rem;
     color: #E6E9ED;
     cursor: pointer;
     border: 5px solid black;
-    box-shadow:  5px 5px 5px 2px red;
+   
     border-radius: 10px;
 
     &:last-child{
@@ -216,18 +208,18 @@ body {
         transform: scale(1.03);
     }
     &.activeCategory{
-    box-shadow:  5px 5px 5px 2px rgb(33, 173, 143);
-
+      color: red;
     }
  }
  .control{
     display: flex;
     justify-content: space-around;
-    
+    width: 12%;
     .change{
     background-color: transparent;
     color: #E6E9ED;
     font-size: 60px;
+    border: 0;
     cursor: pointer;
         &:hover{
         transform: scale(1.2);
@@ -239,18 +231,18 @@ body {
         border: 0;
         width: 100%;
         right: 0;
-        height: 90%;
+        height: 100%;
         font-size: 20rem;
+        opacity: 0.85;
         cursor: pointer;
-        z-index: 2;
         animation: opening 2s infinite;
-        @media only screen and (min-width: 768px) and (max-width: 992px) {
-           top: 0;
-           padding-top: 20%;
-        }
-        
     }
  }
+}
+.categories{
+   display: flex;
+   width: 40%;
+   justify-content: space-between;
 }
 @keyframes opening {
     0%{
@@ -263,4 +255,15 @@ body {
         transform: scale(1);
     }
 }
+@media only screen and (max-width: 992px){
+   .controls, .option, .options{
+   display: none;
+   }
 
+   .just{
+    font-size: 5rem;
+    width: 100%;
+    height: 100%;
+    color: red;
+   }
+}
