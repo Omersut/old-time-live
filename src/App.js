@@ -80,7 +80,7 @@ function App() {
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
-      videoId={video}
+      videoId={year == 80 ? documentry.eighties.music[random] : year == 90 ? documentry.nineties.music[random] : documentry.noughties.music[random]}
       opts={opts}
       onReady={(e) => {setVideoData(e.target); setTimeout(() => {
         Change();
