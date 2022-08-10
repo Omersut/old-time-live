@@ -1,4 +1,3 @@
-$optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 body {
    margin: 0;
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -293,6 +292,22 @@ body {
 }
 
 @media only screen and (max-width: 992px){
+
+   body{
+      .options{
+         flex-direction: column;
+         .option:not(.active){
+            height: 15%;
+         }
+         .option{
+            &.active{
+               max-width: 100%;
+            }
+         }
+      }
+   }
+}
+@media only screen and (max-width: 572px){
    .controls, .option, .options{
    display: none;
    }
