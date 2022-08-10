@@ -100,7 +100,7 @@ function App() {
         clearInterval(time);
     }
     time = setInterval(() => {
-    Change();
+    setChange(!change)
     console.log("a");
   }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
     let audio = new Audio(Static);
