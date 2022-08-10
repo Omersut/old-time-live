@@ -102,11 +102,12 @@ function App() {
       className="youtube"
       videoId={VideoChange()}
       opts={opts}
-      onReady={(e) => {setVideoData(e.target); setTimeout(() => {
-        Change();
-      }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)}}
+      onReady={(e) => {setVideoData(e.target)}}
     />)
   }, 400);
+  setTimeout(() => {
+    Change();
+  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
   }, [year, change])
   
   
