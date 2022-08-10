@@ -95,16 +95,20 @@ function App() {
   const [change, setChange] = useState(false)
   
   const Change = () => {
-    var time;
-    if (time) {
-        clearInterval(time);
-    }
-    time = setInterval(() => {
+    var time = setInterval(() => {
     setChange(!change)
     console.log("a");
   }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
+    if (time) {
+        clearInterval(time);
+       time = setInterval(() => {
+    setChange(!change)
+    console.log("a");
+  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
+    }
+   
     let audio = new Audio(Static);
-    audio.volume = 0.2;
+    audio.volume = 0.1;
     audio.play();
    }
   const [videoDiv, setVideoDiv] = useState(<YouTube
