@@ -3,7 +3,7 @@ import { FaExchangeAlt,FaHeadphonesAlt } from 'react-icons/fa';
 import { FiPause } from 'react-icons/fi';
 import { MdOutlineTv, MdMovie } from 'react-icons/md'
 
-const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change}) => {
+const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change, documentry}) => {
   const icons =[<FaHeadphonesAlt size={60} />, <MdOutlineTv size={60} />]
 
   return (
@@ -51,5 +51,4 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
     </div>
   );
 }
-
 export default Control
