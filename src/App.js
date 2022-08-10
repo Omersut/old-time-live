@@ -121,7 +121,7 @@ function App() {
  
   useEffect(() => {
   setVideo(VideoChange())
-  clearTimeout(time);
+  clearInterval(time);
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
@@ -130,7 +130,7 @@ function App() {
       onReady={(e) => {setVideoData(e.target)}}
     />)
   }, 400);
-  var time = setTimeout(() => {
+  var time = setInterval(() => {
     Change();
     console.log("a");
   }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
