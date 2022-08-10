@@ -122,6 +122,9 @@ function App() {
   useEffect(() => {
   setVideo(VideoChange())
   var time;
+    if (time) {
+        clearInterval(intervalId);
+    }
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
