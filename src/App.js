@@ -36,7 +36,6 @@ function App() {
         "CxL1ukOw0hk",
         "BsrAkKjG4-w",
         "4tnyQ8lYH_k",
-        "BjQou5OvRq8",
       ],
       tvSeries:[
         "d9tvSjfCJRk",
@@ -45,6 +44,8 @@ function App() {
         "guP1VZNHtJg",
         "_ri1WpqVPx0",
         "YULfT3zIdvo",
+        "BjQou5OvRq8",
+
       ]
     },
     noughties: {
