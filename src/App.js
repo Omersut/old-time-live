@@ -132,6 +132,7 @@ function App() {
   }, 400);
   var time = setTimeout(() => {
     Change();
+    console.log("a");
   }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
   }, [year, change])
   
