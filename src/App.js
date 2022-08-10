@@ -123,7 +123,7 @@ function App() {
   setVideo(VideoChange())
   var time;
     if (time) {
-        clearInterval(intervalId);
+        clearInterval(time);
     }
   setTimeout(() => {
     setVideoDiv(<YouTube
