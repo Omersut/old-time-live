@@ -19,7 +19,8 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             }}
             className={"btn" + `${category == c ? " activeCategory" : ""}`}
           >
-            {icons[i]} 
+            {icons[i]} <sub>{category== "Music" ? documentry.eighties.music.length + documentry.nineties.music.length + 
+            documentry.noughties.music.length : documentry.eighties.tvSeries.length + documentry.nineties.tvSeries.length + documentry.noughties.tvSeries.length}</sub>
           </button>
         
         </>))}
