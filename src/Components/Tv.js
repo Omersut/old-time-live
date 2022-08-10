@@ -1,12 +1,12 @@
 
-const Tv = ({year, isOpen, category, setYear, videoDiv, videoData, years}) => {
+const Tv = ({year, isOpen, category, setYear, videoDiv, videoData, years, Change}) => {
 
   return (
     <div className="options">
         {years.map((y) => (
           <div
             className={"option" + `${year == y ? " active" : ""}`}
-            onClick={() => setYear(y)}
+            onClick={() => {setYear(y); Change()}}
           >
             {(year == y) & isOpen && (
               videoDiv
