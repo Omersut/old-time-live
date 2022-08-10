@@ -94,19 +94,8 @@ function App() {
   };
   const [change, setChange] = useState(false)
   
-  const Change = () => {
-    var time = setInterval(() => {
+  const Change = () => {   
     setChange(!change)
-    console.log("a");
-  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
-    if (time) {
-        clearInterval(time);
-       time = setInterval(() => {
-    setChange(!change)
-    console.log("a");
-  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
-    }
-   
     let audio = new Audio(Static);
     audio.volume = 0.1;
     audio.play();
@@ -139,6 +128,10 @@ function App() {
       opts={opts}
       onReady={(e) => {setVideoData(e.target)}}
     />)
+    setTimeout(() => {
+      Change();
+      console.log("a");
+  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
   }, 400);
 
   }, [change])
