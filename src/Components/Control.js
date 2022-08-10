@@ -31,7 +31,17 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             setIsOpen(!isOpen);
           }}
         >
-          {isOpen ? <FiPause /> : <BiRightArrow />}
+          {isOpen ? <FiPause />  : <><div className="about">  {categories.map((c, i) => (<>
+        
+           
+        <button
+          className={"btn activeCategory"}
+        >
+          {icons[i]} <span className='detail' style={{margin: "10px"}}>{c}</span>
+        </button>
+      
+      </>))}</div> <BiRightArrow /></>}
+          
         </button>
         <button className="change" onClick={Change}>
           <FaExchangeAlt onClick={Change} />
