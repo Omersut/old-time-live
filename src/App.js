@@ -124,6 +124,10 @@ function App() {
   var time;
     if (time) {
         clearInterval(time);
+        time = setInterval(() => {
+    Change();
+    console.log("a");
+  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
     }
   setTimeout(() => {
     setVideoDiv(<YouTube
@@ -133,10 +137,7 @@ function App() {
       onReady={(e) => {setVideoData(e.target)}}
     />)
   }, 400);
-  time = setInterval(() => {
-    Change();
-    console.log("a");
-  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
+
   }, [year, change])
   
   
