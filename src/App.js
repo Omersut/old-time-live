@@ -127,7 +127,15 @@ function App() {
       videoId={VideoChange()}
       opts={opts}
       onReady={(e) => {setVideoData(e.target)}}
-    />)
+    />);
+var timeoutHandle = null;
+if(timeoutHandle != null){
+      clearTimeout(timeoutHandle);
+      timeoutHandle = null }
+timeoutHandle = setTimeout(() => {
+    Change();
+    console.log("a");
+    }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
   }, 400);
   }, [change])
   
