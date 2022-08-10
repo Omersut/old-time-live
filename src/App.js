@@ -129,13 +129,11 @@ function App() {
       onReady={(e) => {setVideoData(e.target)}}
     />)
     if(timeoutHandle){
-    clearTimeout(timeoutHandle);
-    timeoutHandle = null;
-    }
+      clearTimeout(timeoutHandle);
+      timeoutHandle = null }
     timeoutHandle = setTimeout(function () {
     Change();
     console.log("a");
-    }
     }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
   }, 400);
 
