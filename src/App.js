@@ -95,7 +95,14 @@ function App() {
   const [change, setChange] = useState(false)
   
   const Change = () => {
-    setChange(!change)
+    var time;
+    if (time) {
+        clearInterval(time);
+    }
+    time = setInterval(() => {
+    Change();
+    console.log("a");
+  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
     let audio = new Audio(Static);
     audio.volume = 0.2;
     audio.play();
@@ -121,14 +128,6 @@ function App() {
  
   useEffect(() => {
   setVideo(VideoChange())
-  var time;
-    if (time) {
-        clearInterval(time);
-        time = setInterval(() => {
-    Change();
-    console.log("a");
-  }, category== "Music" ? 120000: category=="News" ? 120000 : 287000)
-    }
   setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
@@ -138,7 +137,7 @@ function App() {
     />)
   }, 400);
 
-  }, [year, change])
+  }, [change])
   
   
   return (
