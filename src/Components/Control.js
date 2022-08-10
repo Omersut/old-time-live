@@ -11,7 +11,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
       <div className="categories">
         {categories.map((c, i) => (<>
         
-           
+            
           <button
             onClick={() => {
               setCategory(c);
