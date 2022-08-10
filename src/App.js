@@ -55,7 +55,7 @@ function App() {
   const [videoData, setVideoData] = useState("")
   const [isOpen, setIsOpen] = useState(false)
   const [category, setCategory] = useState("Music")
-  const categories = ["Music", "TV Series", "News"];
+  const categories = ["Music", "TV Series"];
   const opts = {
     width: "100%",
     height: "100%",

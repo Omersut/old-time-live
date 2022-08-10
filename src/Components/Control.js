@@ -1,11 +1,10 @@
 import { BiRightArrow } from 'react-icons/bi';
 import { FaExchangeAlt,FaHeadphonesAlt } from 'react-icons/fa';
 import { FiPause } from 'react-icons/fi';
-import { BsNewspaper } from 'react-icons/bs';
-import { MdCameraRoll } from 'react-icons/md'
+import { MdOutlineTv, MdMovie } from 'react-icons/md'
 
 const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change}) => {
-  const icons =[<FaHeadphonesAlt size={60} />, <MdCameraRoll size={60} />, <BsNewspaper size={60} /> ]
+  const icons =[<FaHeadphonesAlt size={60} />, <MdOutlineTv size={60} />]
 
   return (
     <div className="controls">
