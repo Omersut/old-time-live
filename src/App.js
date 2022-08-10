@@ -69,6 +69,8 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [category, setCategory] = useState("Music")
   const categories = ["Music", "TV Series"];
+  const years = [80,90,0]
+
   const opts = {
     width: "100%",
     height: "100%",
@@ -127,7 +129,7 @@ function App() {
   return (
     <div className="App">
       <Control categories={categories} setCategory={setCategory} category={category} isOpen={isOpen} setIsOpen={setIsOpen} Change={Change} setChange={setChange} change={change}/>
-      <Tv isOpen={isOpen} setYear={setYear} year={year} videoDiv={videoDiv} videoData={videoData} category={category}  />
+      <Tv years={years} isOpen={isOpen} setYear={setYear} year={year} videoDiv={videoDiv} videoData={videoData} category={category}  />
       <div className="just">Just PC</div>
     </div>
   );

@@ -1,6 +1,5 @@
 
-const Tv = ({year, isOpen, category, setYear, videoDiv, videoData}) => {
-  const years = [80,90,0]
+const Tv = ({year, isOpen, category, setYear, videoDiv, videoData, years}) => {
 
   return (
     <div className="options">
