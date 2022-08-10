@@ -7,7 +7,6 @@ import Static from './static.mp3';
 
 
 function App() {
-  const [time, setTime] = useState(0)
   const [year, setYear] = useState(90)
   const documentry = {
     eighties: {
@@ -122,21 +121,18 @@ function App() {
  
   useEffect(() => {
   setVideo(VideoChange())
-  setTimeout(() => {
+    setTimeout(() => {
+        Change();
+        console.log("a");
+     }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
+    setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
       videoId={VideoChange()}
       opts={opts}
       onReady={(e) => {setVideoData(e.target)}}
     />);
-  if(timeoutHandle != 0){
-     clearTimeout(timeoutHandle);
-     setTime(0)}
-      setTime(setTimeout(() => {
-        Change();
-        console.log("a");
-      }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
-  }, 400));
+  }, 400);
   }, [change])
   
   
