@@ -99,6 +99,10 @@ function App() {
     let audio = new Audio(Static);
     audio.volume = 0.1;
     audio.play();
+        setTimeout(() => {
+        Change();
+        console.log("a");
+     }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
    }
   const [videoDiv, setVideoDiv] = useState(<YouTube
     className="youtube"
@@ -121,10 +125,6 @@ function App() {
  
   useEffect(() => {
   setVideo(VideoChange())
-    setTimeout(() => {
-        Change();
-        console.log("a");
-     }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
     setTimeout(() => {
     setVideoDiv(<YouTube
       className="youtube"
