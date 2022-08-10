@@ -7,6 +7,7 @@ import Static from './static.mp3';
 
 
 function App() {
+  const [time, setTime] = useState(0)
   const [year, setYear] = useState(90)
   const documentry = {
     eighties: {
@@ -128,15 +129,14 @@ function App() {
       opts={opts}
       onReady={(e) => {setVideoData(e.target)}}
     />);
-var timeoutHandle = null;
-if(timeoutHandle != null){
-      clearTimeout(timeoutHandle);
-      timeoutHandle = null }
-timeoutHandle = setTimeout(() => {
-    Change();
-    console.log("a");
-    }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
-  }, 400);
+  if(timeoutHandle != 0){
+     clearTimeout(timeoutHandle);
+     setTime(0)}
+      setTime(setTimeout(() => {
+        Change();
+        console.log("a");
+      }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
+  }, 400));
   }, [change])
   
   
