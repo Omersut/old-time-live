@@ -7,6 +7,7 @@ import Static from './static.mp3';
 
 
 function App() {
+  const [newVideo, setNewVideo] = useState(90)
   const [year, setYear] = useState(90)
   const documentry = {
     eighties: {
@@ -100,8 +101,11 @@ function App() {
     audio.volume = 0.1;
     audio.play();
         setTimeout(() => {
-        Change();
-        console.log("a");
+          if(newVideo != video){
+            Change();
+            console.log("a")
+            setNewVideo(video)
+          }
      }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
    }
   const [videoDiv, setVideoDiv] = useState(<YouTube
