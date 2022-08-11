@@ -13,20 +13,32 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
   return (
     <div className="controls">
       <div className="categories">
-        {categories.map((c, i) => (<>
-        
-            
-          <button
-            onClick={() => {
-              setCategory(c);
-              setChange(!change)
-            }}
-            className={"btn" + `${category == c ? " activeCategory" : ""}`}
-          >
-            {icons[i]} <sub>{c== "Music" ? (year == 80 ? documentry.eighties.music.length : year == 90 ? documentry.nineties.music.length : documentry.noughties.music.length) :( year == 80 ? documentry.eighties.tvSeries.length : year == 90 ? documentry.nineties.tvSeries.length : documentry.noughties.tvSeries.length)}</sub>
-          </button>
-        
-        </>))}
+        {categories.map((c, i) => (
+          <>
+            <button
+              onClick={() => {
+                setCategory(c);
+                setChange(!change);
+              }}
+              className={"btn" + `${category == c ? " activeCategory" : ""}`}
+            >
+              {icons[i]}{" "}
+              <sub>
+                {c == "Music"
+                  ? year == 80
+                    ? documentry.eighties.music.length
+                    : year == 90
+                    ? documentry.nineties.music.length
+                    : documentry.noughties.music.length
+                  : year == 80
+                  ? documentry.eighties.tvSeries.length
+                  : year == 90
+                  ? documentry.nineties.tvSeries.length
+                  : documentry.noughties.tvSeries.length}
+              </sub>
+            </button>
+          </>
+        ))}
       </div>
       <div className="control">
         <button
@@ -35,17 +47,31 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             setIsOpen(!isOpen);
           }}
         >
-          {isOpen ? <FiPause />  : <><div className="about">  {categoriesLoading.map((c, i) => (<>
-        
-           
-        <button
-          className={"btn activeCategory"}
-        >
-          {iconsLoading[i]} <sub className='detail' style={{margin: "10px"}}>{c}</sub>
-        </button>
-      
-      </>))}</div> <div className="social"><a href='https://omersut.com'>developed by <sup style={{color: "red"}}>omersut.com</sup></a> </div> <BiRightArrow /></>}
-          
+          {isOpen ? (
+            <FiPause />
+          ) : (
+            <>
+              <div className="about">
+                {" "}
+                {categoriesLoading.map((c, i) => (
+                  <>
+                    <button className={"btn activeCategory"}>
+                      {iconsLoading[i]}{" "}
+                      <sub className="detail" style={{ margin: "10px" }}>
+                        {c}
+                      </sub>
+                    </button>
+                  </>
+                ))}
+              </div>{" "}
+              <div className="social">
+                <a href="https://omersut.com">
+                  developed by <sup style={{ color: "red" }}>omersut.com</sup>
+                </a>{" "}
+              </div>{" "}
+              <BiRightArrow />
+            </>
+          )}
         </button>
         <button className="change" onClick={Change}>
           <FaExchangeAlt onClick={Change} />
