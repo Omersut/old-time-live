@@ -88,7 +88,7 @@ function App() {
         />
       );
     }, 300);
-  }, [change, category, year]);
+  }, [change]);
 
   return (
     <div className="App">
