@@ -33,8 +33,7 @@ function App() {
           console.log("a");
         } else {
           setNewVideo(video);
-          console.log("a");
-
+          console.log("set");
         }
       },
       category == "Music" ? 120000 : 287000);
