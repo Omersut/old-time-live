@@ -26,17 +26,8 @@ function App() {
     let audio = new Audio(Static);
     audio.volume = 0.1;
     audio.play();
-    setTimeout(
-      () => {
-        if (newVideo == video) {
-          Change();
-          console.log("a");
-        } else {
-          setNewVideo(video);
-          console.log("set");
-        }
-      },
-      category == "Music" ? 120000 : 287000);
+    setVideo(VideoChange());
+    
   };
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
@@ -75,7 +66,15 @@ function App() {
   };
 
   useEffect(() => {
-    setVideo(VideoChange());
+    setInterval(() => {
+       if(newVideo==video){
+          Change();
+          console.log("change");
+       }else{
+        setNewVideo(video)
+          console.log("set");
+       }
+    }, 10000);
     setTimeout(() => {
       setVideoDiv(
         <YouTube
