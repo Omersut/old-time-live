@@ -73,7 +73,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             </>
           )}
         </button>
-        <button className="change chanel" onClick={Change}>
+        <button className="change" onClick={Change}>
           <FaExchangeAlt onClick={Change} />
         </button>
       </div>
