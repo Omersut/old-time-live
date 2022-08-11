@@ -7,7 +7,6 @@ import Static from './static.mp3';
 
 
 function App() {
-  const [newVideo, setNewVideo] = useState(90)
   const [year, setYear] = useState(90)
   const documentry = {
     eighties: {
@@ -76,6 +75,7 @@ function App() {
     }
   }
   const [video, setVideo] = useState(() => {let random = Math.floor(Math.random() * documentry.nineties.music.length); return documentry.nineties.music[random]})
+  const [newVideo, setNewVideo] = useState(video)
   const [videoData, setVideoData] = useState("")
   const [isOpen, setIsOpen] = useState(false)
   const [category, setCategory] = useState("Music")
@@ -101,10 +101,11 @@ function App() {
     audio.volume = 0.1;
     audio.play();
         setTimeout(() => {
-          if(newVideo != video){
+          if(newVideo == video){
             Change();
             console.log("a")
-            setNewVideo(video)
+          }else{
+          setNewVideo(video)
           }
      }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
    }
