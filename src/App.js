@@ -74,7 +74,7 @@ function App() {
         setNewVideo(video)
         console.log("set");
        }
-    }, 120000);
+    }, 140000);
     setTimeout(() => {
       setVideoDiv(
         <YouTube
