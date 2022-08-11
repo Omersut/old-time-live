@@ -2,6 +2,7 @@ import { BiRightArrow } from 'react-icons/bi';
 import { FaExchangeAlt,FaHeadphonesAlt } from 'react-icons/fa';
 import { FiPause } from 'react-icons/fi';
 import { MdOutlineTv, MdMovie } from 'react-icons/md'
+import { VscGithubInverted } from 'react-icons/vsc'
 
 const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change, documentry, year}) => {
   const icons =[<FaHeadphonesAlt size={60} />, <MdOutlineTv size={60} />]
@@ -43,7 +44,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
           {iconsLoading[i]} <sub className='detail' style={{margin: "10px"}}>{c}</sub>
         </button>
       
-      </>))}</div> <BiRightArrow /></>}
+      </>))}</div> <div className="social"><a href='https://omersut.com'>developed by <sup style={{color: "red"}}>omersut.com</sup></a> </div> <BiRightArrow /></>}
           
         </button>
         <button className="change" onClick={Change}>

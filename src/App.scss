@@ -1,5 +1,9 @@
 *{
    list-style: none;
+   text-decoration: none;
+}
+a{
+   color: unset;
 }
 body {
    margin: 0;
@@ -271,10 +275,11 @@ body {
         left: 0;
         height: 100%;
         font-size: 14rem;
-        opacity: 0.95;
-        cursor: pointer;
+        opacity: 2;
+        cursor: context-menu;
         svg{
         animation: opening 2s infinite;
+        cursor: pointer;
 
         }
         .about{
@@ -285,16 +290,20 @@ body {
          opacity: 0.4;
          display: block;
          width: 100%;
+         
          button:hover{
             transform: scale(1);
 
          }
          .detail{
             color: #E6E9ED;
+            cursor: context-menu;
+
          }
 
          svg{
             animation: none;
+            cursor: context-menu;
          }
          .activeCategory{
             float: left;
@@ -311,6 +320,15 @@ body {
    display: flex;
    width: 40%;
    justify-content: left;
+}
+.social{
+   position: absolute;
+   right: 2%;
+   top: 2%;
+   color: #E6E9ED;
+   font-size: 2.5rem;
+   opacity: 0.9;
+  
 }
 @keyframes opening {
     0%{
