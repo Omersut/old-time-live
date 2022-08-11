@@ -5,6 +5,9 @@ import { MdOutlineTv, MdMovie } from 'react-icons/md'
 
 const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change, documentry, year}) => {
   const icons =[<FaHeadphonesAlt size={60} />, <MdOutlineTv size={60} />]
+  const iconsLoading =[<FaHeadphonesAlt size={60} />, <MdOutlineTv size={60} /> , <FiPause size={60} />, <BiRightArrow size={60} />]
+  const categoriesLoading =["Music", "TV Series", "Pause", "Start"]
+
 
   return (
     <div className="controls">
@@ -31,13 +34,13 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             setIsOpen(!isOpen);
           }}
         >
-          {isOpen ? <FiPause />  : <><div className="about">  {categories.map((c, i) => (<>
+          {isOpen ? <FiPause />  : <><div className="about">  {categoriesLoading.map((c, i) => (<>
         
            
         <button
           className={"btn activeCategory"}
         >
-          {icons[i]} <span className='detail' style={{margin: "10px"}}>{c}</span>
+          {iconsLoading[i]} <sub className='detail' style={{margin: "10px"}}>{c}</sub>
         </button>
       
       </>))}</div> <BiRightArrow /></>}
