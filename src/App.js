@@ -33,10 +33,11 @@ function App() {
           console.log("a");
         } else {
           setNewVideo(video);
+          console.log("a");
+
         }
       },
-      category == "Music" ? 120000 : category == "News" ? 120000 : 287000
-    );
+      category == "Music" ? 120000 : 287000);
   };
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
