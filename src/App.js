@@ -136,6 +136,14 @@ function App() {
     let audio = new Audio(Static);
     audio.volume = 0.1;
     audio.play();
+    setTimeout(() => {
+      if(newVideo == video){
+        Change();
+        console.log("a")
+      }else{
+      setNewVideo(video)
+      }
+ }, category== "Music" ? 120000: category=="News" ? 120000 : 287000);
    }
   const [videoDiv, setVideoDiv] = useState(<YouTube
     className="youtube"
@@ -158,14 +166,16 @@ function App() {
  
   useEffect(() => {
   setVideo(VideoChange())
-    setVideoDiv(<YouTube
-      className="youtube"
-      videoId={VideoChange()}
-      opts={opts}
-      onReady={(e) => {setVideoData(e.target)}}
-      onError={() => console.log("error")}
-    />);
-  }, [change])
+    setTimeout(() => {
+      setVideoDiv(<YouTube
+        className="youtube"
+        videoId={VideoChange()}
+        opts={opts}
+        onReady={(e) => {setVideoData(e.target)}}
+        onError={() => console.log("error")}
+      />);
+    }, 500);
+  }, [change, category, year])
   
   
   return (
