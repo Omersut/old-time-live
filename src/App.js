@@ -143,7 +143,7 @@ function App() {
   
   return (
     <div className="App">
-      <Control documentry={documentry} categories={categories} setCategory={setCategory} category={category} isOpen={isOpen} setIsOpen={setIsOpen} Change={Change} setChange={setChange} change={change}/>
+      <Control year={year} documentry={documentry} categories={categories} setCategory={setCategory} category={category} isOpen={isOpen} setIsOpen={setIsOpen} Change={Change} setChange={setChange} change={change}/>
       <Tv Change={Change} years={years} isOpen={isOpen} setYear={setYear} year={year} videoDiv={videoDiv} videoData={videoData} category={category}  />
       <div className="just">Just PC</div>
     </div>
