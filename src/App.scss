@@ -366,6 +366,10 @@ body {
    color: red;
    display: none;
   }
+.chanel{
+transform: scale(1.5);
+   margin-left: 10px;
+}
 @media only screen and (max-width: 572px){
    .controls, .option, .options{
    display: none;
