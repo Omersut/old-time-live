@@ -84,7 +84,7 @@ function App() {
           onReady={(e) => {
             setVideoData(e.target);
           }}
-          onError={() => console.log("error")}
+          onError={() => Change()}
         />
       );
     }, 300);
