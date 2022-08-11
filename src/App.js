@@ -64,7 +64,7 @@ function App() {
         : documentry.noughties.tvSeries[random];
     }
   };
-
+ 
   useEffect(() => {
     setInterval(() => {
        if(newVideo==video){
