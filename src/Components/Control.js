@@ -71,7 +71,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
               </div>{" "}
               <div className="social">
                 <a href="https://omersut.com">
-                  developed by <sup style={{ color: "#ff0000db;" }}>omersut.com</sup>
+                  developed by <sup >omersut.com</sup>
                 </a>{" "}
               </div>{" "}
               <BiRightArrow />

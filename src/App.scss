@@ -428,6 +428,9 @@ i {
   color: #e6e9ed;
   font-size: 2rem;
   opacity: 0.9;
+  sup {
+    color: #ff0000db;
+  }
   @media only screen and (max-width: 1600px) {
     bottom: 2%;
     top: 80%;
