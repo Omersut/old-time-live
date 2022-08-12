@@ -286,7 +286,7 @@ body {
         animation: opening 2s infinite;
         cursor: pointer;
         @media only screen and (max-width: 572px){
-         padding-top: 15%;
+         // padding-top: 15%;
       
          }
     
@@ -358,7 +358,7 @@ body {
    opacity: 0.9;
    @media only screen and (max-width: 572px){
       bottom: 2%;
-      top: unset;
+      top: 80%;
    }
   
 }
