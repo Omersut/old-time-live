@@ -59,7 +59,7 @@ body {
       // visibility: hidden;
       height: 65%;
       position: relative;
-      top: 2%;
+      top: -1%;
     }
     // @for $i from 1 through 4 {
     //    @media screen and (max-width:(798px - $i*80)) {
@@ -118,6 +118,10 @@ body {
             top: 15px;
             opacity: 1;
             text-align: left;
+
+            @media only screen and (max-width: 572px) {
+              font-size: 22px;
+            }
           }
         }
         /*&:active {
@@ -140,6 +144,11 @@ body {
           .info > div {
             left: 20px;
             opacity: 0;
+          }
+
+          .icon {
+            left: 13px;
+            position: relative;
           }
         }
       }
@@ -440,9 +449,6 @@ i {
       flex-direction: column;
       .option:not(.active) {
         height: 16%;
-        .icon {
-          height: 85px;
-        }
       }
       .option {
         &.active {
