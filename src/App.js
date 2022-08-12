@@ -66,13 +66,6 @@ function App() {
   };
  
   useEffect(() => {
-    setInterval(() => {
-       if(newVideo==video){
-          Change();
-       }else{
-        setNewVideo(video)
-       }
-    }, 100000);
     setTimeout(() => {
       setVideoDiv(
         <YouTube
@@ -81,7 +74,13 @@ function App() {
           opts={opts}
           onReady={(e) => {
             setVideoData(e.target);
-            window.document.title = videoData.videoTitle.slice(0, 15);
+            setTimeout(() => {
+              if(newVideo==video){
+                Change();
+             }else{
+              setNewVideo(video)
+             }
+            }, 100000);
           }}
           onError={() => Change()}
         />
@@ -89,6 +88,10 @@ function App() {
       
     }, 300);
   }, [change]);
+  useEffect(() => {
+    window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
+  }, [videoData])
+  
 
   return (
     <div className="App">
