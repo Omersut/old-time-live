@@ -45,6 +45,9 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
           className={"change" + `${!isOpen ? " start" : ""}`}
           onClick={() => {
             setIsOpen(!isOpen);
+            setTimeout(() => {
+              Change();
+            }, 1000);
           }}
         >
           {isOpen ? (
