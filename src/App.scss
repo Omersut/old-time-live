@@ -57,7 +57,7 @@ body {
     z-index: 0;
     @media only screen and (max-width: 572px) {
       // visibility: hidden;
-      height: 80%;
+      height: 70%;
       position: relative;
       top: 2%;
     }
@@ -359,7 +359,7 @@ i {
   @media only screen and (max-width: 572px) {
     justify-content: center;
     position: absolute;
-    top: 12%;
+    top: 16%;
     width: 100%;
   }
 }
@@ -392,7 +392,7 @@ i {
     .options {
       flex-direction: column;
       .option:not(.active) {
-        height: 15%;
+        height: 20%;
       }
       .option {
         &.active {
