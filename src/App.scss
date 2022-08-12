@@ -57,7 +57,7 @@ body {
     z-index: 0;
     @media only screen and (max-width: 572px) {
       // visibility: hidden;
-      height: 70%;
+      height: 65%;
       position: relative;
       top: 2%;
     }
@@ -225,6 +225,9 @@ body {
 .controls {
   border-radius: 10px;
   height: 12%;
+  @media only screen and (max-width: 572px) {
+    height: 2%;
+  }
   opacity: 0.92;
   display: flex;
   z-index: 1;
@@ -359,7 +362,7 @@ i {
   @media only screen and (max-width: 572px) {
     justify-content: center;
     position: absolute;
-    top: 16%;
+    top: 0%;
     width: 100%;
   }
 }
