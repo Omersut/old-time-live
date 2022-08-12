@@ -117,7 +117,7 @@ function App() {
         videoData={videoData}
         category={category}
       />
-      <div className="just">PC Only For Now</div>
+      <div className="footer"></div>
     </div>
   );
 }
