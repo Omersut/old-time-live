@@ -8,7 +8,7 @@ import documentry from "./Doc/documentry";
 import opts from "./Doc/opts";
 
 function App() {
-  const [year, setYear] = useState(90);
+  const [year, setYear] = useState(80);
   const [video, setVideo] = useState(() => {
     let random = Math.floor(Math.random() * documentry.nineties.music.length);
     return documentry.nineties.music[random];
