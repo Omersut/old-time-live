@@ -44,14 +44,16 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
         <button
           className={"change" + `${!isOpen ? " start" : ""}`}
           onClick={() => {
-            setIsOpen(!isOpen);
             setTimeout(() => {
               Change();
+
             }, 1000);
+            setIsOpen(!isOpen);
+
           }}
         >
           {isOpen ? (
-            <FiPause size={50} />
+            <FiPause className='pause' size={50} />
           ) : (
             <>
               <div className="about">
