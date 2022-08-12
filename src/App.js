@@ -69,10 +69,8 @@ function App() {
     setInterval(() => {
        if(newVideo==video){
           Change();
-          console.log("change");
        }else{
         setNewVideo(video)
-        console.log("set");
        }
     }, 100000);
     setTimeout(() => {
@@ -116,7 +114,7 @@ function App() {
         videoData={videoData}
         category={category}
       />
-      <div className="just">Just PC</div>
+      <div className="just">PC Only For Now</div>
     </div>
   );
 }

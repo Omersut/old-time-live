@@ -5,9 +5,9 @@ import { MdOutlineTv, MdMovie } from 'react-icons/md'
 import { VscGithubInverted } from 'react-icons/vsc'
 
 const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change, documentry, year}) => {
-  const icons =[<FaHeadphonesAlt size={60} />, <MdOutlineTv size={60} />]
-  const iconsLoading =[<FaHeadphonesAlt size={60} />, <MdOutlineTv size={60} /> , <FiPause size={60} />, <BiRightArrow size={60} />]
-  const categoriesLoading =["Music", "TV Series", "Pause", "Start"]
+  const icons =[<FaHeadphonesAlt size={50} />, <MdOutlineTv size={50} />]
+  const iconsLoading =[<FaHeadphonesAlt size={35} />, <MdOutlineTv size={35} /> , <FiPause size={35} />, <BiRightArrow size={35} />,<FaExchangeAlt size={35}  />]
+  const categoriesLoading =["Music", "TV Series", "Pause", "Start", "Change"]
 
 
   return (
@@ -48,7 +48,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
           }}
         >
           {isOpen ? (
-            <FiPause />
+            <FiPause size={50} />
           ) : (
             <>
               <div className="about">
@@ -74,7 +74,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
           )}
         </button>
         <button className="change" onClick={Change}>
-          <FaExchangeAlt onClick={Change} />
+          <FaExchangeAlt size={80} onClick={Change} />
         </button>
       </div>
     </div>
