@@ -318,7 +318,7 @@ i {
         opacity: 0.4;
         display: block;
         width: 100%;
-        @media only screen and (max-width: 572px) {
+        @media only screen and (max-width: 992px) {
           .activeCategory:nth-child(3) {
             display: none;
           }
@@ -390,7 +390,7 @@ i {
   color: #e6e9ed;
   font-size: 2.5rem;
   opacity: 0.9;
-  @media only screen and (max-width: 572px) {
+  @media only screen and (max-width: 1600px) {
     bottom: 2%;
     top: 80%;
   }
