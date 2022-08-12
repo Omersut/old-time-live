@@ -83,10 +83,12 @@ function App() {
           opts={opts}
           onReady={(e) => {
             setVideoData(e.target);
+            window.document.title = videoData.videoTitle.slice(0, 15);
           }}
           onError={() => Change()}
         />
       );
+      
     }, 300);
   }, [change]);
 
