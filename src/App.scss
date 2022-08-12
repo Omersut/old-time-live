@@ -56,17 +56,18 @@ body {
     height: 80%;
     z-index: 0;
     @media only screen and (max-width: 572px){
-      visibility: hidden;
+      // visibility: hidden;
+      height: 55%;
    
       }
-      @for $i from 1 through 4 {
-         @media screen and (max-width:(798px - $i*80)) {
-            min-width:600px - $i*80;
-            .option:nth-child(#{6-$i}) {
-               display:none;
-            }
-         }
-      }
+      // @for $i from 1 through 4 {
+      //    @media screen and (max-width:(798px - $i*80)) {
+      //       min-width:600px - $i*80;
+      //       .option:nth-child(#{6-$i}) {
+      //          display:none;
+      //       }
+      //    }
+      // }
       
       .option {
          position: relative;
@@ -400,9 +401,9 @@ body {
   }
 @media only screen and (max-width: 572px){
 
-   .just{
-    display: block;
-    position: absolute;
-    top: 40%;
-   }
+   // .just{
+   //  display: block;
+   //  position: absolute;
+   //  top: 40%;
+   // }
 }
