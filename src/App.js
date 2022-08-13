@@ -10,16 +10,24 @@ import opts from "./Doc/opts";
 function App() {
   const [year, setYear] = useState(80);
   const [video, setVideo] = useState("");
-  const [newVideo, setNewVideo] = useState(video);
+  const [time, setTime] = useState(true);
   const [videoData, setVideoData] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [category, setCategory] = useState("Music");
   const categories = ["Music", "TV Series"];
   const years = [80, 90, 0];
   const [change, setChange] = useState(false);
-  let time = null;
-
-
+  let aa= null;
+  const clear=(callback) =>{
+    if(aa){
+      clearTimeout(aa);
+    aa = null;
+    callback();
+    }
+  }
+  const settime = () => {
+    setTime(!time);
+  }
   const Change = () => {
     setChange(!change);
     let audio = new Audio(Static);
@@ -27,31 +35,10 @@ function App() {
     audio.play();
     setVideo(VideoChange());
     console.log("change", video);
+    clear(settime);
   };
 
-  const myTimeout = () => {
-    if(!change){
-      time = setTimeout(() => {
-        Change();
-      }, 100000);
-    }else{
-      clear();
 
-    }
- 
-
-  }
-  const clear = () => {
-      if (time) {
-        clearTimeout(time);
-      time = null;
-      
-      }
-      time = setTimeout(() => {
-        Change();
-      }, 100000);
-      
-  }
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
   );
@@ -88,7 +75,8 @@ function App() {
     }
 
   };
- 
+
+
   useEffect(() => {
     setTimeout(() => {
       setVideoDiv(
@@ -100,7 +88,6 @@ function App() {
             setVideoData(e.target);
             window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
             console.log("onread", video);
-            setNewVideo(video);
           }}
           onError={Change}
         />
@@ -108,10 +95,13 @@ function App() {
     console.log("time", video);
       
     }, 300);
-    myTimeout();
   }, [change]);
 
-  
+  useEffect(() => {
+    aa = setTimeout(() => {
+     Change();
+    }, 100000);
+   }, [time])
 
   return (
     <div className="App">
