@@ -87,7 +87,7 @@ function App() {
     }, 300);
     var time;
     time = setTimeout(() => {
-      if (video == newVideo) {
+      if (video != newVideo) {
         Change();
       }
     }, 10000);
