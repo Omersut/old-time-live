@@ -74,9 +74,14 @@ function App() {
             setTimeout(() => {
               if(newVideo==video){
                 Change();
+             console.log("ok");
+
              }else{
               setNewVideo(video)
+             console.log("set");
+
              }
+             console.log("time");
             }, 100000);
           }}
           onError={() => Change()}
