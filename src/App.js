@@ -91,9 +91,13 @@ function App() {
         Change();
       }
       console.log("girdi");
-      clearTimeout(time)
 
     }, 10000);
+    setTimeout(() => {
+
+      clearTimeout(time)
+
+    }, 11000);
     
   }, [change]);
 
