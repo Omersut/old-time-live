@@ -39,6 +39,7 @@ function App() {
   };
 
 
+
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
   );
@@ -76,7 +77,6 @@ function App() {
 
   };
 
-
   useEffect(() => {
     setTimeout(() => {
       setVideoDiv(
@@ -101,6 +101,8 @@ function App() {
     aa = setTimeout(() => {
      Change();
     }, category == "Music" ? 5000 : 10000);
+    console.log("time");
+
    }, [time])
 
   return (
