@@ -83,6 +83,7 @@ function App() {
     console.log("time");
 
    }, [time])
+ 
   useEffect(() => {
     setTimeout(() => {
       setVideoDiv(
@@ -103,7 +104,10 @@ function App() {
     }, 300);
   }, [change]);
 
-
+  useEffect(() => {
+    window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0,32)
+    console.log(window.document.title, videoData.videoTitle);
+   }, [videoData])
 
   return (
     <div className="App">
