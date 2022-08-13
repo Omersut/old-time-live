@@ -9,10 +9,7 @@ import opts from "./Doc/opts";
 
 function App() {
   const [year, setYear] = useState(80);
-  const [video, setVideo] = useState(() => {
-    let random = Math.floor(Math.random() * documentry.nineties.music.length);
-    return documentry.nineties.music[random];
-  });
+  const [video, setVideo] = useState("");
   const [newVideo, setNewVideo] = useState(video);
   const [videoData, setVideoData] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -117,7 +114,13 @@ function App() {
         videoData={videoData}
         category={category}
       />
-      <div className="footer"></div>
+      <div className="footer">
+        <ul className="nav">
+          <li>how to work</li>
+          <li>who am i</li>
+          <li>what is this</li>
+        </ul>
+      </div>
     </div>
   );
 }
