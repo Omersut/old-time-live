@@ -100,7 +100,7 @@ function App() {
   useEffect(() => {
     aa = setTimeout(() => {
      Change();
-    }, 100000);
+    }, category == "Music" ? 5000 : 10000);
    }, [time])
 
   return (
