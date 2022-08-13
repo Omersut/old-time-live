@@ -17,7 +17,7 @@ function App() {
   const categories = ["Music", "TV Series"];
   const years = [80, 90, 0];
   const [change, setChange] = useState(false);
-  var time;
+  let time = null;
 
 
   const Change = () => {
@@ -28,6 +28,24 @@ function App() {
     setVideo(VideoChange());
     console.log("change", video);
   };
+
+  const myTimeout = () => {
+    if(!change){
+      time = setTimeout(() => {
+        Change();
+      }, 6000);
+    }else{
+      clear();
+    }
+ 
+
+  }
+  const clear = () => {
+      if (time) {
+        clearTimeout(time);
+      time = null;
+      }
+  }
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
   );
@@ -77,8 +95,6 @@ function App() {
             window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
             console.log("onread", video);
             setNewVideo(video);
-
-
           }}
           onError={Change}
         />
@@ -86,19 +102,7 @@ function App() {
     console.log("time", video);
       
     }, 300);
-    time = setTimeout(() => {
-      if (video == newVideo) {
-        Change();
-      }
-      console.log("girdi");
-
-    }, 10000);
-    setTimeout(() => {
-
-      clearTimeout(time)
-
-    }, 11000);
-    
+    myTimeout();
   }, [change]);
 
   
