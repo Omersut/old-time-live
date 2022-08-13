@@ -18,7 +18,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             <button
               onClick={() => {
                 setCategory(c);
-                setChange(!change);
+                Change();
               }}
               className={"btn" + `${category == c ? " activeCategory" : ""}`}
             >
@@ -44,12 +44,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
         <button
           className={"change" + `${!isOpen ? " start" : ""}`}
           onClick={() => {
-            setTimeout(() => {
-              Change();
-
-            }, 1000);
             setIsOpen(!isOpen);
-
           }}
         >
           {isOpen ? (
@@ -74,12 +69,14 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
                   developed by <sup >omersut.com</sup>
                 </a>{" "}
               </div>{" "}
-              <BiRightArrow />
+              <BiRightArrow onClick={() =>setTimeout(() => {
+              Change();
+            }, 1000)}/>
             </>
           )}
         </button>
         <button className="change" onClick={Change}>
-          <FaExchangeAlt size={80} onClick={Change} />
+          <FaExchangeAlt size={80} />
         </button>
       </div>
     </div>

@@ -24,7 +24,7 @@ function App() {
     audio.volume = 0.1;
     audio.play();
     setVideo(VideoChange());
-    
+    console.log("change", video);
   };
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
@@ -60,6 +60,7 @@ function App() {
         ? documentry.nineties.tvSeries[random]
         : documentry.noughties.tvSeries[random];
     }
+
   };
  
   useEffect(() => {
@@ -71,28 +72,28 @@ function App() {
           opts={opts}
           onReady={(e) => {
             setVideoData(e.target);
-            setTimeout(() => {
-              if(newVideo==video){
-                Change();
-             console.log("ok");
+            window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
+            console.log("onread", video);
+            setNewVideo(video);
+             clearInterval(time)
 
-             }else{
-              setNewVideo(video)
-             console.log("set");
 
-             }
-             console.log("time");
-            }, 100000);
           }}
-          onError={() => Change()}
+          onError={Change}
         />
       );
+    console.log("time", video);
       
     }, 300);
+    var time;
+    time = setTimeout(() => {
+      if (video == newVideo) {
+        Change();
+      }
+    }, 10000);
+    
   }, [change]);
-  useEffect(() => {
-    window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
-  }, [videoData])
+
   
 
   return (
