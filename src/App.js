@@ -33,7 +33,7 @@ function App() {
     if(!change){
       time = setTimeout(() => {
         Change();
-      }, 10000);
+      }, 100000);
     }else{
       clear();
 
@@ -49,7 +49,7 @@ function App() {
       }
       time = setTimeout(() => {
         Change();
-      }, 10000);
+      }, 100000);
       
   }
   const [videoDiv, setVideoDiv] = useState(
