@@ -36,6 +36,9 @@ function App() {
       }, 6000);
     }else{
       clear();
+      time = setTimeout(() => {
+        Change();
+      }, 6000);
     }
  
 
