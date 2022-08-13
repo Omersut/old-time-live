@@ -33,12 +33,10 @@ function App() {
     if(!change){
       time = setTimeout(() => {
         Change();
-      }, 6000);
+      }, 10000);
     }else{
       clear();
-      time = setTimeout(() => {
-        Change();
-      }, 6000);
+
     }
  
 
@@ -47,7 +45,12 @@ function App() {
       if (time) {
         clearTimeout(time);
       time = null;
+      
       }
+      time = setTimeout(() => {
+        Change();
+      }, 10000);
+      
   }
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
