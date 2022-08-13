@@ -75,7 +75,7 @@ function App() {
             window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
             console.log("onread", video);
             setNewVideo(video);
-             clearInterval(time)
+             clearTimeout(time)
 
 
           }}
@@ -90,6 +90,7 @@ function App() {
       if (video != newVideo) {
         Change();
       }
+      console.log("girdi");
     }, 10000);
     
   }, [change]);
