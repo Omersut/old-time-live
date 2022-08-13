@@ -80,7 +80,6 @@ function App() {
     aa = setTimeout(() => {
      Change();
     }, category == "Music" ? 100000 : 220000);
-    console.log("time");
 
    }, [time])
  
@@ -94,19 +93,16 @@ function App() {
           onReady={(e) => {
             setVideoData(e.target);
             window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
-            console.log("onread", video);
           }}
           onError={Change}
         />
       );
-    console.log("time", video);
       
     }, 300);
   }, [change]);
 
   useEffect(() => {
     window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0,32)
-    console.log(window.document.title, videoData.videoTitle);
    }, [videoData])
 
   return (
