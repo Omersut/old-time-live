@@ -17,6 +17,8 @@ function App() {
   const categories = ["Music", "TV Series"];
   const years = [80, 90, 0];
   const [change, setChange] = useState(false);
+  var time;
+
 
   const Change = () => {
     setChange(!change);
@@ -75,6 +77,7 @@ function App() {
             window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
             console.log("onread", video);
             setNewVideo(video);
+      clearTimeout(time)
 
 
           }}
@@ -84,13 +87,11 @@ function App() {
     console.log("time", video);
       
     }, 300);
-    var time;
     time = setTimeout(() => {
-      if (video != newVideo) {
+      if (video == newVideo) {
         Change();
       }
       console.log("girdi");
-      clearTimeout(time)
 
     }, 10000);
     
