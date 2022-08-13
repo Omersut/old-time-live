@@ -76,7 +76,13 @@ function App() {
     }
 
   };
+  useEffect(() => {
+    aa = setTimeout(() => {
+     Change();
+    }, category == "Music" ? 100000 : 220000);
+    console.log("time");
 
+   }, [time])
   useEffect(() => {
     setTimeout(() => {
       setVideoDiv(
@@ -97,13 +103,7 @@ function App() {
     }, 300);
   }, [change]);
 
-  useEffect(() => {
-    aa = setTimeout(() => {
-     Change();
-    }, category == "Music" ? 5000 : 10000);
-    console.log("time");
 
-   }, [time])
 
   return (
     <div className="App">
