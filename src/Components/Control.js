@@ -39,7 +39,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             </button>
           </>
         ))}
-        <button className="change" onClick={Change} style={{marginRight: "10px", transform: "scale(1.1)"}}>
+        <button className="change" onClick={Change} style={{marginRight: "10px"}}>
           <FaExchangeAlt size={50} />
         </button>
       </div>

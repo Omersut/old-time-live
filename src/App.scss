@@ -121,8 +121,14 @@ body {
             text-align: left;
 
             @media only screen and (max-width: 572px) {
-              font-size: 22px;
+              font-size: 19px;
+              left: 2px;
+              top: 4px;
             }
+          }
+
+          @media only screen and (max-width: 572px) {
+            left: 5px;
           }
         }
         /*&:active {
@@ -170,7 +176,7 @@ body {
         height: 160px;
 
         @media only screen and (max-width: 572px) {
-          height: 134px;
+          height: 126px;
         }
         transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
       }
@@ -430,6 +436,7 @@ i {
         width: 23%;
         text-align: center;
         border: none;
+        background-color: rgba(255, 0, 0, 0.7294117647);
       }
       svg {
         width: 40px;
