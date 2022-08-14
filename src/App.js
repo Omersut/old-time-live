@@ -17,17 +17,17 @@ function App() {
   const categories = ["Music", "TV Series"];
   const years = [80, 90, 0];
   const [change, setChange] = useState(false);
-  let aa= null;
-  const clear=(callback) =>{
-    if(aa){
+  let aa = null;
+  const clear = (callback) => {
+    if (aa) {
       clearTimeout(aa);
-    aa = null;
-    callback();
+      aa = null;
+      callback();
     }
-  }
+  };
   const settime = () => {
     setTime(!time);
-  }
+  };
   const Change = () => {
     setChange(!change);
     let audio = new Audio(Static);
@@ -37,8 +37,6 @@ function App() {
     console.log("change", video);
     clear(settime);
   };
-
-
 
   const [videoDiv, setVideoDiv] = useState(
     <YouTube className="youtube" videoId={video} opts={opts} />
@@ -74,15 +72,16 @@ function App() {
         ? documentry.nineties.tvSeries[random]
         : documentry.noughties.tvSeries[random];
     }
-
   };
   useEffect(() => {
-    aa = setTimeout(() => {
-     Change();
-    }, category == "Music" ? 60000 : 130000);
+    aa = setTimeout(
+      () => {
+        Change();
+      },
+      category == "Music" ? 75000 : 130000
+    );
+  }, [time]);
 
-   }, [time])
- 
   useEffect(() => {
     setTimeout(() => {
       setVideoDiv(
@@ -92,18 +91,23 @@ function App() {
           opts={opts}
           onReady={(e) => {
             setVideoData(e.target);
-            window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0, 29);
+            window.document.title =
+              videoData.videoTitle == undefined
+                ? "Old TV"
+                : videoData.videoTitle.slice(0, 29);
           }}
           onError={Change}
         />
       );
-      
     }, 300);
   }, [change]);
 
   useEffect(() => {
-    window.document.title = videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle.slice(0,32)
-   }, [videoData])
+    window.document.title =
+      videoData.videoTitle == undefined
+        ? "Old TV"
+        : videoData.videoTitle.slice(0, 32);
+  }, [videoData]);
 
   return (
     <div className="App">
