@@ -131,9 +131,9 @@ function App() {
       />
       <div className="footer">
         <ul className="nav">
-          <li>how to work</li>
+          {/* <li>how to work</li>
           <li>who am i</li>
-          <li>what is this</li>
+          <li>what is this</li> */}
         </ul>
       </div>
     </div>
