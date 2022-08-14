@@ -57,7 +57,6 @@ const documentry = {
   nineties: {
     music: [
       "bdso4qwyul0",
-      "6ahjwoNB01c",
       "Fed2MoNZNyw",
       "mQhz3n-WSHI",
       "CxL1ukOw0hk",
@@ -79,6 +78,24 @@ const documentry = {
       "8LrPwGaJz5E",
       "fOnohmbo3fg",
       "8ZgchjhvoSo",
+      "a8-RshlYFGA",
+      "zd8IFDgQCUc",
+      "LJ9FpMXJmwY",
+      "inRtnmPxxRw",
+      "IVE00F-2ZCw",
+      "JBElQJbWdF0",
+      "cbLp3GNjfd0",
+      "Cg16C85FyEQ",
+      "hK73i75SnQw",
+      "58YMgJIaT8w",
+      "vgqHhAwlYmg",
+      "WibVR2YKx-k",
+      "S4cSSmRC5RY",
+      "cI9Ev_aPxNA",
+      "3muaPrKOFN8",
+      "aLSIYrGYn_I",
+      "yQz8Rh8SVA8",
+
     ],
     tvSeries: [
       "d9tvSjfCJRk",
@@ -114,6 +131,7 @@ const documentry = {
       "SKgVWXEdwX0",
       "RKnzncjQv6U",
       "5dtdoGQvHds",
+      "sGLfdwPnvuU",
     ],
   },
   noughties: {
@@ -132,6 +150,8 @@ const documentry = {
       "FwGycBACe9s",
       "RVeUBMiGaXU",
       "JJfHHmjzkjs",
+      "birgqdzUAQE",
+      
     ],
     tvSeries: [
       "t8HVHo1AYJg",
@@ -148,6 +168,8 @@ const documentry = {
       "VfZx4mjVfW4",
       "2_3v8ET25pk",
       "6dt4O0q4KeE",
+      "kTAXGk1TBD4",
+      
     ],
   },
 };
