@@ -23,7 +23,7 @@ const Tv = ({year, isOpen, category, setYear, videoDiv, videoData, years, Change
                 {isOpen &&
                 videoData.videoTitle &&
                 videoData.videoTitle.length > 35
-                  ? videoData.videoTitle.slice(0, 35) + "..."
+                  ? videoData.videoTitle.slice(0, 34) + "..."
                   : videoData.videoTitle}
               </div>
             </div>
