@@ -57,7 +57,7 @@ body {
     z-index: 0;
     @media only screen and (max-width: 572px) {
       // visibility: hidden;
-      height: 65%;
+      height: 81%;
       position: relative;
       top: -1%;
       width: 94%;
@@ -167,9 +167,11 @@ body {
         bottom: 0px;
         left: 0px;
         right: 0px;
-
         height: 160px;
 
+        @media only screen and (max-width: 572px) {
+          height: 134px;
+        }
         transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
       }
       .label {
@@ -305,7 +307,9 @@ i {
     font-size: 60px;
     border: 0;
     @media only screen and (max-width: 572px) {
-      // padding-bottom: 32px;
+      &.chanel {
+        display: none;
+      }
     }
     cursor: pointer;
     &:hover {

@@ -79,7 +79,7 @@ function App() {
   useEffect(() => {
     aa = setTimeout(() => {
      Change();
-    }, category == "Music" ? 100000 : 220000);
+    }, category == "Music" ? 60000 : 200000);
 
    }, [time])
  

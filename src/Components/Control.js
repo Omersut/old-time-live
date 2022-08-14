@@ -71,11 +71,11 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
               </div>{" "}
               <BiRightArrow onClick={() =>setTimeout(() => {
               Change();
-            }, 1000)}/>
+            }, 400)}/>
             </>
           )}
         </button>
-        <button className="change" onClick={Change}>
+        <button className="change chanel" onClick={Change}>
           <FaExchangeAlt size={80} />
         </button>
       </div>
