@@ -83,23 +83,25 @@ function App() {
   }, [time]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setVideoDiv(
-        <YouTube
-          className="youtube"
-          videoId={VideoChange()}
-          opts={opts}
-          onReady={(e) => {
-            setVideoData(e.target);
-            window.document.title =
-              videoData.videoTitle == undefined
-                ? "Old TV"
-                : videoData.videoTitle.slice(0, 29);
-          }}
-          onError={Change}
-        />
-      );
-    }, 300);
+    if (isOpen) {
+      setTimeout(() => {
+        setVideoDiv(
+          <YouTube
+            className="youtube"
+            videoId={VideoChange()}
+            opts={opts}
+            onReady={(e) => {
+              setVideoData(e.target);
+              window.document.title =
+                videoData.videoTitle == undefined
+                  ? "Old TV"
+                  : videoData.videoTitle.slice(0, 29);
+            }}
+            onError={Change}
+          />
+        );
+      }, 300);
+    }
   }, [change]);
 
   useEffect(() => {
