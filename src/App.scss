@@ -57,13 +57,19 @@ body {
     height: 77%;
     z-index: 0;
     padding-top: 15px;
-    border-top: 10px solid rgb(255 255 255 / 14%);
+    border-top: 10px solid #e6e9ed94;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     @media only screen and (max-width: 572px) {
       // visibility: hidden;
+      padding-top: 13px;
+
       height: 81%;
       position: relative;
-      top: -1%;
+      top: -2%;
       width: 94%;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
     }
     // @for $i from 1 through 4 {
     //    @media screen and (max-width:(798px - $i*80)) {
@@ -266,7 +272,7 @@ body {
   padding-bottom: 7px;
   @media only screen and (max-width: 572px) {
     height: 2%;
-    padding-bottom: 30px;
+    padding-bottom: 55px;
   }
   opacity: 0.92;
   display: flex;
