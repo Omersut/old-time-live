@@ -1,6 +1,7 @@
 * {
   list-style: none;
   text-decoration: none;
+  transition: all 1s;
 }
 a {
   color: unset;
@@ -53,7 +54,7 @@ body {
     align-items: stretch;
     overflow: hidden;
     width: calc(100% - 100px);
-    height: 80%;
+    height: 77%;
     z-index: 0;
     @media only screen and (max-width: 572px) {
       // visibility: hidden;
@@ -259,7 +260,7 @@ body {
 }
 .controls {
   border-radius: 10px;
-  height: 12%;
+  height: 11%;
   @media only screen and (max-width: 572px) {
     height: 2%;
   }
@@ -416,7 +417,7 @@ i {
 .categories {
   display: flex;
   width: 40%;
-  justify-content: left;
+  justify-content: end;
   .change {
     @media only screen and (min-width: 572px) {
       display: none;
@@ -443,6 +444,21 @@ i {
         height: 40px;
       }
     }
+  }
+}
+.logo {
+  transform: scale(0.9);
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  &:hover {
+    transform: scale(1);
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 1600px) {
+    display: none;
   }
 }
 .social {
@@ -510,24 +526,57 @@ i {
     }
   }
 }
+.info {
+  display: none;
+  position: absolute;
+  width: 90%;
+  top: 16%;
+  left: 5%;
+  color: #ff0000db;
+  height: 56vh;
+  .data {
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: black;
+    border: 10px solid #ff0000db;
+    border-radius: 10px;
+    .about {
+      .btn {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
 .footer {
   width: 100%;
   height: 10%;
   border-radius: 100% 0 0;
   box-shadow: inset 0 -91px 108px -13px black, inset 0 -24px 33px 46px #ff0000bd;
   margin-top: 10px;
+
   .nav {
     display: flex;
     color: #d4d7da;
     float: right;
-    align-items: 2;
     height: 100%;
-    align-items: center;
+    align-items: end;
     li {
       padding: 25px;
       font-size: 2.2rem;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:hover + .info {
+        display: block;
+      }
     }
   }
+
   @media only screen and (max-width: 992px) {
     display: none;
   }

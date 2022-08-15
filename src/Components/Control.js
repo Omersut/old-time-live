@@ -1,17 +1,34 @@
-import { BiRightArrow } from 'react-icons/bi';
-import { FaExchangeAlt,FaHeadphonesAlt } from 'react-icons/fa';
-import { FiPause } from 'react-icons/fi';
-import { MdOutlineTv, MdMovie } from 'react-icons/md'
-import { VscGithubInverted } from 'react-icons/vsc'
+import { BiRightArrow } from "react-icons/bi";
+import { FaExchangeAlt, FaHeadphonesAlt } from "react-icons/fa";
+import { FiPause } from "react-icons/fi";
+import { MdOutlineTv, MdMovie } from "react-icons/md";
+import { VscGithubInverted } from "react-icons/vsc";
 
-const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,setChange, change, documentry, year}) => {
-  const icons =[<FaHeadphonesAlt size={50} />, <MdOutlineTv size={50} />]
-  const iconsLoading =[<FaHeadphonesAlt size={35} />, <MdOutlineTv size={35} /> , <FiPause size={35} />, <BiRightArrow size={35} />,<FaExchangeAlt size={35}  />]
-  const categoriesLoading =["Music", "TV Series", "Pause", "Start", "Change"]
-
+const Control = ({
+  categories,
+  setCategory,
+  category,
+  isOpen,
+  setIsOpen,
+  Change,
+  setChange,
+  change,
+  documentry,
+  year,
+}) => {
+  const icons = [<FaHeadphonesAlt size={50} />, <MdOutlineTv size={50} />];
+  const iconsLoading = [
+    <FaHeadphonesAlt size={35} />,
+    <MdOutlineTv size={35} />,
+    <FiPause size={35} />,
+    <BiRightArrow size={35} />,
+    <FaExchangeAlt size={35} />,
+  ];
+  const categoriesLoading = ["Music", "TV Series", "Pause", "Start", "Change"];
 
   return (
     <div className="controls">
+      <img src="https://i.hizliresim.com/e5js1q0.png" className="logo" />
       <div className="categories">
         {categories.map((c, i) => (
           <>
@@ -39,7 +56,11 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
             </button>
           </>
         ))}
-        <button className="change" onClick={Change} style={{marginRight: "10px"}}>
+        <button
+          className="change"
+          onClick={Change}
+          style={{ marginRight: "10px" }}
+        >
           <FaExchangeAlt size={50} />
         </button>
       </div>
@@ -51,7 +72,7 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
           }}
         >
           {isOpen ? (
-            <FiPause className='pause' size={50} />
+            <FiPause className="pause" size={50} />
           ) : (
             <>
               <div className="about">
@@ -69,12 +90,16 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
               </div>{" "}
               <div className="social">
                 <a href="https://omersut.com">
-                  developed by <sup >omersut.com</sup>
+                  developed by <sup>omersut.com</sup>
                 </a>{" "}
               </div>{" "}
-              <BiRightArrow onClick={() =>setTimeout(() => {
-              Change();
-            }, 400)}/>
+              <BiRightArrow
+                onClick={() =>
+                  setTimeout(() => {
+                    Change();
+                  }, 400)
+                }
+              />
             </>
           )}
         </button>
@@ -84,5 +109,5 @@ const Control = ({categories, setCategory, category, isOpen, setIsOpen, Change,s
       </div>
     </div>
   );
-}
-export default Control
+};
+export default Control;
