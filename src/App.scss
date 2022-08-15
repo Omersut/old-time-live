@@ -459,9 +459,10 @@ i {
     color: #ff0000db;
   }
   @media only screen and (max-width: 1600px) {
-    bottom: 2%;
-    top: 80%;
+    bottom: 6%;
+    top: unset;
     width: 100%;
+    right: unset;
   }
 }
 @keyframes opening {
