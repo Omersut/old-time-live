@@ -526,7 +526,7 @@ i {
     }
   }
 }
-.info {
+.info-control {
   display: none;
   position: absolute;
   width: 90%;
@@ -571,7 +571,7 @@ i {
       &:hover {
         transform: scale(1.1);
       }
-      &:hover + .info {
+      &:hover + .info-control {
         display: block;
       }
     }

@@ -156,7 +156,7 @@ function App() {
           <li>
             <RiFolderWarningFill size={60} />
           </li>
-          <div className="info">
+          <div className="info-control">
             <div className="data">
               <div className="about">
                 {" "}
