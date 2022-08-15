@@ -320,7 +320,7 @@ i {
     }
     cursor: pointer;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.08);
     }
     &.start {
       background-color: black;
@@ -453,8 +453,8 @@ i {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  animation: logo 3s infinite;
   &:hover {
-    transform: scale(1);
     cursor: pointer;
   }
   @media only screen and (max-width: 1600px) {
@@ -530,9 +530,9 @@ i {
   display: none;
   position: absolute;
   width: 90%;
-  top: 16%;
+  top: 11%;
   left: 5%;
-  color: #ff0000db;
+  color: rgba(255, 0, 0, 0.8588235294);
   height: 56vh;
   .data {
     width: 40%;
@@ -579,5 +579,16 @@ i {
 
   @media only screen and (max-width: 992px) {
     display: none;
+  }
+}
+@keyframes logo {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
   }
 }

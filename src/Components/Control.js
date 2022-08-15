@@ -28,7 +28,11 @@ const Control = ({
 
   return (
     <div className="controls">
-      <img src="https://i.hizliresim.com/e5js1q0.png" className="logo" />
+      <img
+        onClick={() => (window.location.href = "/")}
+        src="https://i.hizliresim.com/e5js1q0.png"
+        className="logo"
+      />
       <div className="categories">
         {categories.map((c, i) => (
           <>
