@@ -77,7 +77,6 @@ const documentry = {
       "uI7hT-X9l7s",
       "FkdhPXnm_ps",
       "RA7lRA2XBBg",
-      "8LrPwGaJz5E",
       "fOnohmbo3fg",
       "8ZgchjhvoSo",
       "a8-RshlYFGA",
