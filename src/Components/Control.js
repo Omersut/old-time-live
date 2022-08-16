@@ -68,12 +68,7 @@ const Control = ({
         </button>
       </div>
       <div className="control">
-        <button
-          className={"change" + `${!isOpen ? " start" : ""}`}
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <button className={"change" + `${!isOpen ? " start" : ""}`}>
           {isOpen ? (
             <FiPause className="pause" size={50} />
           ) : (
@@ -97,8 +92,9 @@ const Control = ({
               <BiRightArrow
                 onClick={() =>
                   setTimeout(() => {
+                    setIsOpen(!isOpen);
                     Change();
-                  }, 400)
+                  }, 200)
                 }
               />
             </>
