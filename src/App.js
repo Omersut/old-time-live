@@ -1,27 +1,14 @@
 import "./App.scss";
-import { BiRightArrow } from "react-icons/bi";
-import { FaExchangeAlt, FaHeadphonesAlt } from "react-icons/fa";
-import { FiPause } from "react-icons/fi";
-import { MdOutlineTv, MdMovie } from "react-icons/md";
-import { VscGithubInverted } from "react-icons/vsc";
 import { useEffect, useState } from "react";
 import YouTube from "react-youtube";
-import { RiFolderWarningFill } from "react-icons/ri";
 import Control from "./Components/Control";
 import Tv from "./Components/Tv";
 import Static from "./Doc/static.mp3";
 import documentry from "./Doc/documentry";
 import opts from "./Doc/opts";
+import Footer from "./Components/Footer";
 
 function App() {
-  const iconsLoading = [
-    <FaHeadphonesAlt size={35} />,
-    <MdOutlineTv size={35} />,
-    <FiPause size={35} />,
-    <BiRightArrow size={35} />,
-    <FaExchangeAlt size={35} />,
-  ];
-  const categoriesLoading = ["Music", "TV Series", "Pause", "Start", "Change"];
   const [year, setYear] = useState(80);
   const [video, setVideo] = useState("");
   const [time, setTime] = useState(true);
@@ -149,35 +136,7 @@ function App() {
         videoData={videoData}
         category={category}
       />
-      <div className="footer">
-        <ul className="nav">
-          <li></li>
-          <li></li>
-          <li>
-            <RiFolderWarningFill size={60} />
-          </li>
-          <div className="info-control">
-            <div className="data">
-              <div className="about">
-                {" "}
-                {categoriesLoading.map((c, i) => (
-                  <>
-                    <button className={"btn activeCategory"}>
-                      {iconsLoading[i]}{" "}
-                      <sub className="detail" style={{ margin: "10px" }}>
-                        {c}
-                      </sub>
-                    </button>
-                  </>
-                ))}
-                <div style={{ marginTop: "20px" }}>
-                  developed by <sup style={{ color: "wheat" }}>omersut.com</sup>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ul>
-      </div>
+      <Footer />
     </div>
   );
 }
