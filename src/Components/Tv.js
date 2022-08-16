@@ -1,10 +1,18 @@
-
-const Tv = ({year, isOpen, category, setYear, videoDiv, videoData, years, Change}) => {
-
+const Tv = ({
+  year,
+  isOpen,
+  category,
+  setYear,
+  videoDiv,
+  videoData,
+  years,
+  Change,
+}) => {
   return (
     <div className="options">
-      {years.map((y) => (
+      {years.map((y, i) => (
         <div
+          key={i}
           className={"option" + `${year == y ? " active" : ""}`}
           onClick={() => {
             setYear(y);
@@ -32,6 +40,6 @@ const Tv = ({year, isOpen, category, setYear, videoDiv, videoData, years, Change
       ))}
     </div>
   );
-}
+};
 
-export default Tv
+export default Tv;

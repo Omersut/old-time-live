@@ -37,6 +37,7 @@ const Control = ({
         {categories.map((c, i) => (
           <>
             <button
+              key={i}
               onClick={() => {
                 setCategory(c);
                 Change();
@@ -83,7 +84,7 @@ const Control = ({
                 {" "}
                 {categoriesLoading.map((c, i) => (
                   <>
-                    <button className={"btn activeCategory"}>
+                    <button key={i} className={"btn activeCategory"}>
                       {iconsLoading[i]}{" "}
                       <sub className="detail" style={{ margin: "10px" }}>
                         {c}

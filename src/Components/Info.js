@@ -18,7 +18,7 @@ const Info = () => {
         <div className="about">
           {categoriesLoading.map((c, i) => (
             <>
-              <button className={"btn activeCategory"}>
+              <button key={i} className={"btn activeCategory"}>
                 {iconsLoading[i]}{" "}
                 <sub className="detail" style={{ margin: "10px" }}>
                   {c}
