@@ -35,31 +35,29 @@ const Control = ({
       />
       <div className="categories">
         {categories.map((c, i) => (
-          <>
-            <button
-              key={i}
-              onClick={() => {
-                setCategory(c);
-                Change();
-              }}
-              className={"btn" + `${category == c ? " activeCategory" : ""}`}
-            >
-              {icons[i]}{" "}
-              <sub>
-                {c == "Music"
-                  ? year == 80
-                    ? documentry.eighties.music.length
-                    : year == 90
-                    ? documentry.nineties.music.length
-                    : documentry.noughties.music.length
-                  : year == 80
-                  ? documentry.eighties.tvSeries.length
+          <button
+            key={i}
+            onClick={() => {
+              setCategory(c);
+              Change();
+            }}
+            className={"btn" + `${category == c ? " activeCategory" : ""}`}
+          >
+            {icons[i]}{" "}
+            <sub>
+              {c == "Music"
+                ? year == 80
+                  ? documentry.eighties.music.length
                   : year == 90
-                  ? documentry.nineties.tvSeries.length
-                  : documentry.noughties.tvSeries.length}
-              </sub>
-            </button>
-          </>
+                  ? documentry.nineties.music.length
+                  : documentry.noughties.music.length
+                : year == 80
+                ? documentry.eighties.tvSeries.length
+                : year == 90
+                ? documentry.nineties.tvSeries.length
+                : documentry.noughties.tvSeries.length}
+            </sub>
+          </button>
         ))}
         <button
           className="change"
@@ -83,14 +81,12 @@ const Control = ({
               <div className="about">
                 {" "}
                 {categoriesLoading.map((c, i) => (
-                  <>
-                    <button key={i} className={"btn activeCategory"}>
-                      {iconsLoading[i]}{" "}
-                      <sub className="detail" style={{ margin: "10px" }}>
-                        {c}
-                      </sub>
-                    </button>
-                  </>
+                  <button key={i} className={"btn activeCategory"}>
+                    {iconsLoading[i]}{" "}
+                    <sub className="detail" style={{ margin: "10px" }}>
+                      {c}
+                    </sub>
+                  </button>
                 ))}
               </div>{" "}
               <div className="social">

@@ -17,14 +17,12 @@ const Info = () => {
       <div className="data">
         <div className="about">
           {categoriesLoading.map((c, i) => (
-            <>
-              <button key={i} className={"btn activeCategory"}>
-                {iconsLoading[i]}{" "}
-                <sub className="detail" style={{ margin: "10px" }}>
-                  {c}
-                </sub>
-              </button>
-            </>
+            <button key={i} className={"btn activeCategory"}>
+              {iconsLoading[i]}{" "}
+              <sub className="detail" style={{ margin: "10px" }}>
+                {c}
+              </sub>
+            </button>
           ))}
           <div style={{ marginTop: "20px" }}>
             developed by <sup style={{ color: "wheat" }}>omersut.com</sup>
