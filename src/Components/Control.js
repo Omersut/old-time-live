@@ -70,7 +70,7 @@ const Control = ({
       <div className="control">
         <button className={"change" + `${!isOpen ? " start" : ""}`}>
           {isOpen ? (
-            <FiPause className="pause" size={50} />
+            <FiPause className="pause" onClick={() => setIsOpen(!isOpen)} size={50} />
           ) : (
             <>
               <div className="about">
