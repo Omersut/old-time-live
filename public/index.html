@@ -18,6 +18,9 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-4JV5SX8WHM"
     ></script>
     <script>
+       if(navigator.userAgent.includes("Instagram")){
+      window.location.href = "https://oldtime.live";
+  }
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
