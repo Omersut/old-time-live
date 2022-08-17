@@ -24,12 +24,8 @@
         var facebook = str.indexOf("FB");
 
         if (/android/i.test(userAgent) && (instagram != -1 || facebook != -1) ) {
-            document.write("<a target=\"_blank\" href=\"https://oltime.live\" download id=\"open-browser-url\">Please wait. Proceed to Chrome</a>");
-            window.stop();
-            let input = document.getElementById('open-browser-url');
-            if (input) {
-                input.click();
-            }
+            document.write("<a href={location.href} target='_blank' download>Open in browser</a>");
+            
         }
       window.dataLayer = window.dataLayer || [];
       function gtag() {
