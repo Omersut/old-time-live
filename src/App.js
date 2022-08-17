@@ -117,7 +117,7 @@ function App() {
 
     if (instagram != -1 || facebook != -1) {
       document.write(
-        "<button href={location.href} target='_blank' style='padding: 20px 40px ; background-color: red; color: white; border-radius: 10px; position: absolute; top; 40%; left: 35%;'>Start</button>"
+        "<button href={location.href} target='_blank' style='padding: 20px 40px ; background-color: red; color: white; border-radius: 10px; position: absolute; top; 40%; left: 35%;' download>Start</button>"
       );
       window.stop();
     }
