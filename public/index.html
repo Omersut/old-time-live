@@ -18,15 +18,6 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-4JV5SX8WHM"
     ></script>
     <script>
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        var str = navigator.userAgent;
-        var instagram = str.indexOf("Instagram");
-        var facebook = str.indexOf("FB");
-
-        if (/android/i.test(userAgent) && (instagram != -1 || facebook != -1) ) {
-            document.write("<button href={location.href} target='_blank' style="padding: 20px 40px ; background-color: red; color: white; border-radius: 10px;">Start</button>");
-            window.stop();
-        }
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);

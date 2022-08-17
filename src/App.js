@@ -96,7 +96,7 @@ function App() {
               window.document.title =
                 videoData.videoTitle == undefined
                   ? "Old TV"
-                  : videoData.videoTitle.slice(0, 29);
+                  : videoData.videoTitle;
             }}
             onError={Change}
           />
@@ -107,10 +107,21 @@ function App() {
 
   useEffect(() => {
     window.document.title =
-      videoData.videoTitle == undefined
-        ? "Old TV"
-        : videoData.videoTitle.slice(0, 32);
+      videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle;
   }, [videoData]);
+  useEffect(() => {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    var str = navigator.userAgent;
+    var instagram = str.indexOf("Instagram");
+    var facebook = str.indexOf("FB");
+
+    if (instagram != -1 || facebook != -1) {
+      document.write(
+        "<button href={location.href} target='_blank' style='padding: 20px 40px ; background-color: red; color: white; border-radius: 10px;'>Start</button>"
+      );
+      window.stop();
+    }
+  }, []);
 
   return (
     <div className="App">
