@@ -110,16 +110,14 @@ function App() {
       videoData.videoTitle == undefined ? "Old TV" : videoData.videoTitle;
   }, [videoData]);
   useEffect(() => {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     var str = navigator.userAgent;
     var instagram = str.indexOf("Instagram");
     var facebook = str.indexOf("FB");
 
     if (instagram != -1 || facebook != -1) {
       document.write(
-        "<button href={location.href} target='_blank' style='padding: 20px 40px ; background-color: red; color: white; border-radius: 10px; position: absolute; top: 40%; left: 35%;' download>Start</button>"
+        "<a href={location.href} target='_blank' download>Open in browser</a>"
       );
-      window.stop();
     }
   }, []);
 
