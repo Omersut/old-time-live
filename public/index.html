@@ -24,7 +24,7 @@
         var facebook = str.indexOf("FB");
 
         if (/android/i.test(userAgent) && (instagram != -1 || facebook != -1) ) {
-            document.write("<a href={location.href} target='_blank' download>Open in browser</a>");
+            document.write("<button href={location.href} target='_blank' download><img src="https://i.hizliresim.com/e5js1q0.png" class="logo"/></button>");
             window.stop();
         }
       window.dataLayer = window.dataLayer || [];
