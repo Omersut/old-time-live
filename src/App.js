@@ -116,7 +116,7 @@ function App() {
 
     if (instagram != -1 || facebook != -1) {
       document.write(
-        "<a href={location.href} target='_blank' download>Open in browser</a>"
+        "<a style='background-color: black; color: #ff0000ba; position: absolute; border: 0; width: 100%; right: 0; top: 0; bottom: 0; left: 0; height: 100%; font-size: 10rem; opacity: 2; text-align: center; text-decoration: none;' href={location.href} target='_blank' download><span style='  position: fixed; color: red; top: 32%; right: 20%; left: 15%; font-weight: bold; padding: 30px;'>📺<span/></a>"
       );
     }
   }, []);
