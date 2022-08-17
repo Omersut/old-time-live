@@ -1,7 +1,6 @@
 {
-  "short_name": "Old TV",
-  "name": "Nostalgi",
-  "icons": [
+ "name": "App",
+ "icons": [
   {
    "src": "\/android-icon-36x36.png",
    "sizes": "36x36",
@@ -38,10 +37,5 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ],
-  
-  "start_url": ".",
-  "display": "fullscreen",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+ ]
 }
