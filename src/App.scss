@@ -110,6 +110,9 @@ body {
 
       &:nth-child(1) {
         background-image: url(https://media2.giphy.com/media/XuBNdP9Pb7W9i/giphy.gif);
+        &:hover {
+          filter: grayscale(80%);
+        }
       }
 
       &:nth-child(2) {
