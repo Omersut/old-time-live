@@ -122,7 +122,7 @@ function App() {
       a.click();
     }
   }, []);
-
+ 
   return (
     <div className="App">
       <Control
